@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/CardViewStyle">
 
     <LinearLayout
@@ -15,16 +17,212 @@
             style="@style/TextCardViewHeaderExpand"
             android:text="@string/site_power_cabinet_information" />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/section_site_power_cabinet_information"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:animateLayoutChanges="true"
-            android:orientation="vertical"
+            tools:visibility="visible"
             android:visibility="gone">
 
+            <TextView
+                android:id="@+id/rectifierType_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/rectifierType"
+                android:text="@string/rectifierType" />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/rectifierType"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/rectifierType_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rectifierType_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/powerCabinetType_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectifierType_txt"
+                app:layout_constraintEnd_toStartOf="@id/powerCabinetType"
+                android:text="@string/powerCabinetType" />
+
+            <TextView
+                android:id="@+id/powerCabinetType"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/powerCabinetType_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/powerCabinetType_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/batteryType_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/powerCabinetType_txt"
+                app:layout_constraintEnd_toStartOf="@id/batteryType"
+                android:text="@string/batteryType" />
+
+            <TextView
+                android:id="@+id/batteryType"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/batteryType_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/batteryType_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/numberOfRack_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/batteryType_txt"
+                app:layout_constraintEnd_toStartOf="@id/numberOfRack"
+                android:text="@string/numberOfRack" />
+
+            <TextView
+                android:id="@+id/numberOfRack"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/numberOfRack_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/numberOfRack_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/rackCapacity_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberOfRack_txt"
+                app:layout_constraintEnd_toStartOf="@id/rackCapacity"
+                android:text="@string/rackCapacity" />
+
+            <TextView
+                android:id="@+id/rackCapacity"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/rackCapacity_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rackCapacity_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/currentDCLoad_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rackCapacity_txt"
+                app:layout_constraintEnd_toStartOf="@id/currentDCLoad"
+                android:text="@string/currentDCLoad" />
+
+            <TextView
+                android:id="@+id/currentDCLoad"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/currentDCLoad_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/currentDCLoad_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/numberOfRectifierModule_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currentDCLoad_txt"
+                app:layout_constraintEnd_toStartOf="@id/numberOfRectifierModule"
+                android:text="@string/numberOfRectifierModule" />
+
+            <TextView
+                android:id="@+id/numberOfRectifierModule"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/numberOfRectifierModule_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/numberOfRectifierModule_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/numberOfSlotAvailable_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberOfRectifierModule_txt"
+                app:layout_constraintEnd_toStartOf="@id/numberOfSlotAvailable"
+                android:text="@string/numberOfSlotAvailable" />
+
+            <TextView
+                android:id="@+id/numberOfSlotAvailable"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/numberOfSlotAvailable_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/numberOfSlotAvailable_txt"
+                tools:text="LIT_229" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

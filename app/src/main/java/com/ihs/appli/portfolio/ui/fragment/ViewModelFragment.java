@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
@@ -69,7 +70,7 @@ public abstract class ViewModelFragment<V extends ViewModel> extends Fragment {
     @BindDrawable(R.drawable.ic_baseline_expand_more_24)
     Drawable expandMore;
 
-    public void collapseExpand(TextView header, LinearLayout section) {
+    public void collapseExpand(TextView header, View section) {
 
         header.setOnClickListener(v -> {
             if (section.getVisibility() == View.GONE) {

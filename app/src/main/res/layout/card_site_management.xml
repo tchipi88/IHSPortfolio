@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/CardViewStyle">
 
     <LinearLayout
@@ -15,16 +17,233 @@
             style="@style/TextCardViewHeaderExpand"
             android:text="@string/site_management" />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/section_site_management"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:animateLayoutChanges="true"
-            android:orientation="vertical"
+            tools:visibility="visible"
             android:visibility="gone">
 
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/sbc_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/sbc"
+                android:text="@string/sbc" />
+
+            <TextView
+                android:id="@+id/sbc"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/sbc_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sbc_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/supervisor_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sbc_txt"
+                app:layout_constraintEnd_toStartOf="@id/supervisor"
+                android:text="@string/site_supervisor" />
+
+            <TextView
+                android:id="@+id/supervisor"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/supervisor_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/supervisor_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/supervisorContact1_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supervisor_txt"
+                app:layout_constraintEnd_toStartOf="@id/supervisorContact1"
+                android:text="@string/contact1" />
+
+            <TextView
+                android:id="@+id/supervisorContact1"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/supervisorContact1_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/supervisorContact1_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/supervisorContact2_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supervisorContact1_txt"
+                app:layout_constraintEnd_toStartOf="@id/supervisorContact2"
+                android:text="@string/contact2" />
+
+            <TextView
+                android:id="@+id/supervisorContact2"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/supervisorContact2_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/supervisorContact2_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/teamLeader_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supervisorContact2_txt"
+                app:layout_constraintEnd_toStartOf="@id/teamLeader"
+                android:text="@string/team_leader" />
+
+            <TextView
+                android:id="@+id/teamLeader"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/teamLeader_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/teamLeader_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/teamLeaderContact1_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teamLeader_txt"
+                app:layout_constraintEnd_toStartOf="@id/teamLeaderContact1"
+                android:text="@string/contact1" />
+
+            <TextView
+                android:id="@+id/teamLeaderContact1"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/teamLeaderContact1_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/teamLeaderContact1_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/teamLeaderContact2_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teamLeaderContact1_txt"
+                app:layout_constraintEnd_toStartOf="@id/teamLeaderContact2"
+                android:text="@string/contact2" />
+
+            <TextView
+                android:id="@+id/teamLeaderContact2"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/teamLeaderContact2_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/teamLeaderContact2_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/securityCompany_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teamLeaderContact2_txt"
+                app:layout_constraintEnd_toStartOf="@id/securityCompany"
+                android:text="@string/security_company" />
+
+            <TextView
+                android:id="@+id/securityCompany"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/securityCompany_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/securityCompany_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/securityCompanyContact_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/securityCompany_txt"
+                app:layout_constraintEnd_toStartOf="@id/securityCompanyContact"
+                android:text="@string/contact1" />
+
+            <TextView
+                android:id="@+id/securityCompanyContact"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/securityCompanyContact_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/securityCompanyContact_txt"
+                tools:text="LIT_229" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

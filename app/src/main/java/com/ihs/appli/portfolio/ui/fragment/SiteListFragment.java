@@ -3,10 +3,16 @@ package com.ihs.appli.portfolio.ui.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -33,12 +39,13 @@ public class SiteListFragment extends ViewModelFragment<SiteViewModel> implement
 
     @Override
     public boolean onQueryTextSubmit(String query) {
-        return false;
+        return true;
     }
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        return false;
+        adapter.getFilter().filter(newText);
+        return true;
     }
 
     @Override
@@ -49,6 +56,13 @@ public class SiteListFragment extends ViewModelFragment<SiteViewModel> implement
     @Override
     protected int getLayoutRes() {
         return R.layout.fragment_site_list;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+
     }
 
     @Override
@@ -77,29 +91,43 @@ public class SiteListFragment extends ViewModelFragment<SiteViewModel> implement
     }
 
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.sitelist, menu);
+        MenuItem searchViewItem = menu.findItem(R.id.action_search);
+
+        final SearchView searchViewAndroidActionBar = (SearchView) searchViewItem.getActionView();
+        searchViewAndroidActionBar.setOnQueryTextListener(this);
+
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+
     public class SimpleItemRecyclerViewAdapter
-            extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
+            extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> implements Filterable {
 
         Context context;
-        private List<Site> mValues;
+        private List<Site> siteList;
+        private List<Site> searchSiteList;
 
 
         public SimpleItemRecyclerViewAdapter() {
-            mValues = new ArrayList<>();
+            siteList = new ArrayList<>();
+            searchSiteList = new ArrayList<>();
         }
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             context = parent.getContext();
             View view = LayoutInflater.from(context)
-                    .inflate(R.layout.viewholder_site
+                    .inflate(R.layout.card_site_informations
                             , parent, false);
             return new ViewHolder(view);
         }
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
-            holder.mItem = mValues.get(position);
+            holder.mItem = siteList.get(position);
             holder.ihsId.setText(holder.mItem.ihsId);
             holder.name.setText(holder.mItem.name);
             holder.site_operator_id.setText(holder.mItem.operatorId);
@@ -107,6 +135,7 @@ public class SiteListFragment extends ViewModelFragment<SiteViewModel> implement
             holder.site_classe.setText(holder.mItem.type);
             holder.site_configuration.setText(holder.mItem.configuration);
             holder.site_topology.setText(holder.mItem.topology);
+            holder.site_cluster.setText(holder.mItem.cluster);
             holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -119,13 +148,55 @@ public class SiteListFragment extends ViewModelFragment<SiteViewModel> implement
 
         @Override
         public int getItemCount() {
-            return mValues.size();
+            return siteList.size();
         }
 
         public void addAll(List<Site> sites) {
-            mValues.addAll(sites);
+            siteList.addAll(sites);
+            searchSiteList.addAll(sites);
             notifyDataSetChanged();
 
+        }
+
+        @Override
+        public Filter getFilter() {
+            return new Filter() {
+                @Override
+                protected FilterResults performFiltering(CharSequence charSequence) {
+                    String charString = charSequence.toString();
+                    if (charString.isEmpty()) {
+                        siteList = searchSiteList;
+                    } else {
+                        List<Site> filteredList = new ArrayList<>();
+                        for (Site row : searchSiteList) {
+
+                            // name match condition. this might differ depending on your requirement
+                            if (
+                                    row.name.toLowerCase().contains(charString.toLowerCase())
+                                    ||row.ihsId.toLowerCase().contains(charString.toLowerCase())
+
+                            ) {
+                                filteredList.add(row);
+                            }
+                        }
+
+                        siteList = filteredList;
+
+                    }
+
+                    FilterResults filterResults = new FilterResults();
+                    filterResults.values = siteList;
+
+
+                    return filterResults;
+                }
+
+                @Override
+                protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                    siteList = (ArrayList<Site>) filterResults.values;
+                    notifyDataSetChanged();
+                }
+            };
         }
 
 
@@ -135,17 +206,18 @@ public class SiteListFragment extends ViewModelFragment<SiteViewModel> implement
             public TextView name;
             @BindView(R.id.ihsId)
             public TextView ihsId;
-            @BindView(R.id.site_operator_id)
+            @BindView(R.id.operatorId)
             public TextView site_operator_id;
-            @BindView(R.id.site_location)
+            @BindView(R.id.region)
             public TextView site_location;
-            @BindView(R.id.site_configuration)
+            @BindView(R.id.configuration)
             public TextView site_configuration;
-            @BindView(R.id.site_classe)
+            @BindView(R.id.type)
             public TextView site_classe;
-            @BindView(R.id.site_topology)
+            @BindView(R.id.topology)
             public TextView site_topology;
-
+            @BindView(R.id.cluster)
+            public TextView site_cluster;
             public Site mItem;
 
             public ViewHolder(View view) {

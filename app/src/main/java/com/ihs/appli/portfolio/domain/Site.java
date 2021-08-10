@@ -32,7 +32,8 @@ import java.util.List;
 public class Site  implements Serializable {
 
     //site informations
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
+    public Long id;
     @NonNull
     public  String ihsId;
     public String region;

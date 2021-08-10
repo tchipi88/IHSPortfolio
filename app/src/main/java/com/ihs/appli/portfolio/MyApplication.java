@@ -5,6 +5,7 @@ import android.app.Application;
 
 import androidx.fragment.app.Fragment;
 
+
 import com.ihs.appli.portfolio.di.components.DaggerAppComponent;
 
 import javax.inject.Inject;

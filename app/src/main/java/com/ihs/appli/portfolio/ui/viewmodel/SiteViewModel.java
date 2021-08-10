@@ -30,6 +30,10 @@ public class SiteViewModel extends AndroidViewModel {
         siteMutableLiveData.setValue(site);
     }
 
+    public LiveData<Site> getSite() {
+        return siteMutableLiveData;
+    }
+
     public LiveData<List<Site>> loadSites() {
         return siteRepository.loadSites();
     }

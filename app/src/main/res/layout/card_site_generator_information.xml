@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/CardViewStyle">
 
     <LinearLayout
@@ -15,16 +17,211 @@
             style="@style/TextCardViewHeaderExpand"
             android:text="@string/site_generator_information" />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/section_site_generator_information"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:animateLayoutChanges="true"
-            android:orientation="vertical"
+            tools:visibility="visible"
             android:visibility="gone">
 
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/numberOfGenerator_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/numberOfGenerator"
+                android:text="@string/numberOfGenerator" />
+
+            <TextView
+                android:id="@+id/numberOfGenerator"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/numberOfGenerator_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/numberOfGenerator_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/generatorSize1_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberOfGenerator_txt"
+                app:layout_constraintEnd_toStartOf="@id/generatorSize1"
+                android:text="@string/generatorSize1" />
+
+            <TextView
+                android:id="@+id/generatorSize1"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/generatorSize1_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/generatorSize1_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/generatorSize2_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generatorSize1_txt"
+                app:layout_constraintEnd_toStartOf="@id/generatorSize2"
+                android:text="@string/generatorSize2" />
+
+            <TextView
+                android:id="@+id/generatorSize2"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/generatorSize2_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/generatorSize2_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/generatorBrand_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generatorSize2_txt"
+                app:layout_constraintEnd_toStartOf="@id/generatorBrand"
+                android:text="@string/generatorBrand" />
+
+            <TextView
+                android:id="@+id/generatorBrand"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/generatorBrand_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/generatorBrand_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/generatorEngineBrand_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generatorBrand_txt"
+                app:layout_constraintEnd_toStartOf="@id/generatorEngineBrand"
+                android:text="@string/generatorEngineBrand" />
+
+            <TextView
+                android:id="@+id/generatorEngineBrand"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/generatorEngineBrand_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/generatorEngineBrand_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/generatorEngineType_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generatorEngineBrand_txt"
+                app:layout_constraintEnd_toStartOf="@id/generatorEngineType"
+                android:text="@string/generatorEngineType" />
+
+            <TextView
+                android:id="@+id/generatorEngineType"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/generatorEngineType_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/generatorEngineType_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/generatorMainAlternatorBrand_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generatorEngineType_txt"
+                app:layout_constraintEnd_toStartOf="@id/generatorMainAlternatorBrand"
+                android:text="@string/generatorMainAlternatorBrand" />
+
+            <TextView
+                android:id="@+id/generatorMainAlternatorBrand"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/generatorMainAlternatorBrand_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/generatorMainAlternatorBrand_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/generatorMainAlternatorType_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generatorMainAlternatorBrand_txt"
+                app:layout_constraintEnd_toStartOf="@id/generatorMainAlternatorType"
+                android:text="@string/generatorMainAlternatorType" />
+
+            <TextView
+                android:id="@+id/generatorMainAlternatorType"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/generatorMainAlternatorType_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/generatorMainAlternatorType_txt"
+                tools:text="LIT_229" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

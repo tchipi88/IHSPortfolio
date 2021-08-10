@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/CardViewStyle">
 
     <LinearLayout
@@ -15,16 +17,88 @@
             style="@style/TextCardViewHeaderExpand"
             android:text="@string/site_fuel_tank_information" />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/section_site_fuel_tank_information"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:animateLayoutChanges="true"
-            android:orientation="vertical"
+            tools:visibility="visible"
             android:visibility="gone">
 
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/fuelTankForme_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fuelTankForme"
+                android:text="@string/fuelTankForme" />
+
+            <TextView
+                android:id="@+id/fuelTankForme"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/fuelTankForme_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fuelTankForme_txt"
+                tools:text="LIT_229" />
+
+
+
+            <TextView
+                android:id="@+id/fuelTankSize_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fuelTankForme_txt"
+                app:layout_constraintEnd_toStartOf="@id/fuelTankSize"
+                android:text="@string/fuelTankSize" />
+
+            <TextView
+                android:id="@+id/fuelTankSize"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/fuelTankSize_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fuelTankSize_txt"
+                tools:text="LIT_229" />
+
+
+            <TextView
+                android:id="@+id/fuelTankCapacity_txt"
+                style="@style/TextCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fuelTankSize_txt"
+                app:layout_constraintEnd_toStartOf="@id/fuelTankCapacity"
+                android:text="@string/fuelTankCapacity" />
+
+            <TextView
+                android:id="@+id/fuelTankCapacity"
+                style="@style/TextCardView"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8dp"
+                app:layout_constraintStart_toEndOf="@id/fuelTankCapacity_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fuelTankCapacity_txt"
+                tools:text="LIT_229" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

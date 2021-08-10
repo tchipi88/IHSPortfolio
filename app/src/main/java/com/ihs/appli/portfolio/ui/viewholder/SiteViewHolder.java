@@ -17,15 +17,15 @@ public class SiteViewHolder extends RecyclerView.ViewHolder {
     public TextView name;
     @BindView(R.id.ihsId)
     public TextView ihsId;
-    @BindView(R.id.site_operator_id)
+    @BindView(R.id.operatorId)
     public TextView site_operator_id;
-    @BindView(R.id.site_location)
+    @BindView(R.id.region)
     public TextView site_location;
-    @BindView(R.id.site_configuration)
+    @BindView(R.id.configuration)
     public TextView site_configuration;
-    @BindView(R.id.site_classe)
+    @BindView(R.id.type)
     public TextView site_classe;
-    @BindView(R.id.site_topology)
+    @BindView(R.id.topology)
     public TextView site_topology;
 
     public SiteViewHolder(View itemView) {

@@ -18,16 +18,17 @@
         <action
             android:id="@+id/action_siteListFragment_to_siteAddFragment"
             app:destination="@id/siteAddFragment" />
-        <action
-            android:id="@+id/action_siteListFragment_to_siteEditFragment"
-            app:destination="@id/siteEditFragment" />
     </fragment>
     <action android:id="@+id/action_global_siteListFragment" app:destination="@id/siteListFragment" />
     <action android:id="@+id/action_global_settingsFragment" app:destination="@id/settingsFragment" />
     <fragment
         android:id="@+id/siteFragment"
         android:name="com.ihs.appli.portfolio.ui.fragment.SiteFragment"
-        android:label="Site" />
+        android:label="Site" >
+        <action
+            android:id="@+id/action_siteFragment_to_siteEditFragment"
+            app:destination="@id/siteEditFragment" />
+    </fragment>
     <fragment
         android:id="@+id/siteAddFragment"
         android:name="com.ihs.appli.portfolio.ui.fragment.SiteAddFragment"

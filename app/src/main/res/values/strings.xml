@@ -60,4 +60,7 @@
     <string name="save">Save</string>
     <string name="cluster">Cluster</string>
     <string name="security_company">Security company</string>
+    <string name="transformerAvailable">Transformer Available</string>
+    <string name="search">Search</string>
+    <string name="edit">Edit</string>
 </resources>
