@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IHS Portfolio</string>
+    <string name="no_data">No Data</string>
+    <string name="site_name">Name</string>
+    <string name="site_id">IHS ID</string>
+    <string name="site_location">State</string>
+    <string name="site_configuration">Configuration</string>
+    <string name="site_classe">Class</string>
+    <string name="site_topology">Topology</string>
+    <string name="site_operator_id">Operator ID</string>
+</resources>

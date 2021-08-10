@@ -1,0 +1,101 @@
+plugins {
+    id 'com.android.application'
+}
+apply from: "$project.rootDir/tools/script-git-version.gradle"
+android {
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "com.ihs.appli.portfolio"
+        minSdk 22
+        targetSdk 30
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        "androidManifestFile": "$projectDir/src/main/AndroidManifest.xml".toString()
+                ]
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "environnement"
+    productFlavors {
+        dev {
+            versionCode gitVersionCodeTime
+            versionName gitVersionName
+        }
+        prod {
+            versionCode gitVersionCode
+            versionName gitVersionName
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.preference:preference:1.1.1'
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    def room_version = "2.2.5"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version" // use kapt for Kotlin
+    def lifecycle_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    def paging_version = "2.1.2"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+    def nav_version = "2.3.0"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
+
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+
+    // Dagger
+    annotationProcessor "com.google.dagger:dagger-android-processor:2.16"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.16"
+    implementation "com.google.dagger:dagger:2.16"
+    implementation "com.google.dagger:dagger-android:2.16"
+    implementation "com.google.dagger:dagger-android-support:2.16"
+
+    implementation 'pub.devrel:easypermissions:2.0.0'
+
+
+}
