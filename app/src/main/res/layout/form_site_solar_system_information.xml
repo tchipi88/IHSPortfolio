@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CardViewStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+       >
+
+        <TextView
+            android:id="@+id/header_site_management"
+            style="@style/TextCardViewBold"
+            android:text="@string/site_solar_system" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/solarSystemTechnology"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Technology"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/solarSystemTypeRegulateur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/solarSystemTypeRegulateur"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/solarSystemQuantityOfModules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/solarSystemQuantityOfModules"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/solarSystemQuantityOfPanels1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/solarSystemQuantityOfPanels1"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/solarSystemQuantityOfPanels2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/solarSystemQuantityOfPanels2"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+     <com.google.android.material.textfield.TextInputLayout
+         style="@style/TextInputLayout"
+         android:layout_width="0dp"
+         android:layout_weight="0.5"
+         android:layout_height="wrap_content">
+
+         <com.google.android.material.textfield.TextInputEditText
+             style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+             android:id="@+id/solarSystemCaracteristic1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="@string/solarSystemCaracteristic1"
+             android:inputType="textCapWords" />
+     </com.google.android.material.textfield.TextInputLayout>
+
+
+     <com.google.android.material.textfield.TextInputLayout
+         style="@style/TextInputLayout"
+         android:layout_width="0dp"
+         android:layout_weight="0.5"
+         android:layout_height="wrap_content">
+
+         <com.google.android.material.textfield.TextInputEditText
+             style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+             android:id="@+id/solarSystemCaracteristic2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="@string/solarSystemCaracteristic2"
+             android:inputType="textCapWords" />
+     </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

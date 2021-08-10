@@ -1,13 +1,15 @@
 <resources>
     <string name="app_name">IHS Portfolio</string>
     <string name="no_data">No Data</string>
+
     <string name="site_name">Name</string>
-    <string name="site_id">IHS ID</string>
-    <string name="site_location">State</string>
+    <string name="site_ihs_id">IHS ID</string>
+    <string name="site_region">State</string>
     <string name="site_configuration">Configuration</string>
-    <string name="site_classe">Class</string>
+    <string name="site_type">Type</string>
     <string name="site_topology">Topology</string>
     <string name="site_operator_id">Operator ID</string>
+
     <string name="site_informations">SITE INFORMATIONS</string>
     <string name="site_management">SITE MANAGEMENT</string>
     <string name="site_grid_information">GRID INFORMATIONS</string>
@@ -19,4 +21,43 @@
     <string name="my_region">My region</string>
     <string name="pseudo">Pseudo</string>
     <string name="my_cluster">My cluster</string>
+    <string name="sbc">SBC</string>
+    <string name="site_supervisor">Supervisor</string>
+    <string name="supervisor_contact1">Supervisor Contact 1</string>
+    <string name="supervisor_contact2">Supervisor Contact 2</string>
+    <string name="contact1">Contact 1</string>
+    <string name="contact2">Contact 2</string>
+    <string name="team_leader">Team Leader</string>
+    <string name="avrSize">AVR Size ( KVA )</string>
+    <string name="panelNumber">Panel Number</string>
+    <string name="typeConnexion">Type connexion  ( Mono / Tri )</string>
+    <string name="fuelTankCapacity">Tank Capacity (L)</string>
+    <string name="fuelTankSize">Tank Size</string>
+    <string name="fuelTankForme">Forme Tank</string>
+    <string name="solarSystemCaracteristic2">Caracteristic 2 ( V/W )</string>
+    <string name="solarSystemCaracteristic1">Caracteristic 1 ( V/W )</string>
+    <string name="solarSystemQuantityOfPanels2">Quantity of  Panels2</string>
+    <string name="solarSystemQuantityOfPanels1">Quantity of  Panels1</string>
+    <string name="solarSystemQuantityOfModules">Quantity of Modules</string>
+    <string name="solarSystemTypeRegulateur">Type regulateur</string>
+    <string name="Technology">Technology</string>
+    <string name="generatorMainAlternatorType">Main Alternator Type</string>
+    <string name="generatorMainAlternatorBrand">Main Alternator Brand</string>
+    <string name="generatorEngineType">Engine Type</string>
+    <string name="generatorEngineBrand">Engine Brand</string>
+    <string name="generatorBrand">Brand</string>
+    <string name="generatorSize2">Size 2 (KVA)</string>
+    <string name="generatorSize1">Size 1 (KVA)</string>
+    <string name="numberOfGenerator">Nb of Generator</string>
+    <string name="numberOfSlotAvailable">Nbr of slot available</string>
+    <string name="numberOfRectifierModule">Nb of Rectifier module</string>
+    <string name="currentDCLoad">Current DC Load ( A )</string>
+    <string name="rackCapacity">Rack Capacity</string>
+    <string name="numberOfRack">Nb of  Rack</string>
+    <string name="batteryType">Battery Type</string>
+    <string name="powerCabinetType">Power Cabinet Type</string>
+    <string name="rectifierType">"Rectifier (AE) Type "</string>
+    <string name="save">Save</string>
+    <string name="cluster">Cluster</string>
+    <string name="security_company">Security company</string>
 </resources>

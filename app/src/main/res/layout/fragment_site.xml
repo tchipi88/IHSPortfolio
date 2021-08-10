@@ -7,13 +7,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include layout="@layout/layout_site_informations" />
-        <include layout="@layout/layout_site_management" />
-        <include layout="@layout/layout_site_grid_information" />
-        <include layout="@layout/layout_site_power_cabinet_information" />
-        <include layout="@layout/layout_site_generator_information" />
-        <include layout="@layout/layout_site_fuel_tank_information" />
-        <include layout="@layout/layout_site_solar_system_information" />
+        <include layout="@layout/card_site_informations" />
+        <include layout="@layout/card_site_management" />
+        <include layout="@layout/card_site_grid_information" />
+        <include layout="@layout/card_site_power_cabinet_information" />
+        <include layout="@layout/card_site_generator_information" />
+        <include layout="@layout/card_site_fuel_tank_information" />
+        <include layout="@layout/card_site_solar_system_information" />
 
     </LinearLayout>
 

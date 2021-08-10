@@ -48,7 +48,7 @@
             app:layout_constraintStart_toEndOf="@id/ihsId_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/ihsId_txt"
-            tools:text="Loreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeem" />
+            tools:text="LIT_229" />
 
         <TextView
             android:id="@+id/site_operator_id_txt"
@@ -71,7 +71,7 @@
             app:layout_constraintStart_toEndOf="@id/site_operator_id_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/site_operator_id_txt"
-            tools:text="Loreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeem" />
+            tools:text="IHS_EDA_004" />
 
 
 
@@ -84,7 +84,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/site_operator_id_txt"
             app:layout_constraintEnd_toStartOf="@id/site_location"
-            android:text="@string/site_location" />
+            android:text="@string/site_region" />
 
         <TextView
             android:id="@+id/site_location"
@@ -132,7 +132,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/site_configuration_txt"
             app:layout_constraintEnd_toStartOf="@id/site_classe"
-            android:text="@string/site_classe" />
+            android:text="@string/site_type" />
 
         <TextView
             android:id="@+id/site_classe"

@@ -10,7 +10,27 @@
         <entry key="app/src/main/res/drawable/splash_background.xml" value="0.1" />
         <entry key="app/src/main/res/font/roboto.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/card_site_fuel_tank_information.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/card_site_informations.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/card_site_management.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/form_site_fuel_tank_information.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/form_site_generator_information.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/form_site_grid_information.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/form_site_informations.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/form_site_management.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/form_site_power_cabinet_information.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/form_site_solar_system_information.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/fragment_site.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/fragment_site_form.xml" value="0.17258566978193146" />
         <entry key="app/src/main/res/layout/fragment_site_list.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/layout_site_fuel_tank_information.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/layout_site_generator_information.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/layout_site_grid_information.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/layout_site_informations.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/layout_site_management.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/layout_site_power_cabinet_information.xml" value="0.14427083333333332" />
+        <entry key="app/src/main/res/layout/layout_site_solar_system_information.xml" value="0.19927536231884058" />
+        <entry key="app/src/main/res/layout/layout_site_solor_system_information.xml" value="0.14427083333333332" />
         <entry key="app/src/main/res/layout/viewholder_site.xml" value="0.14427083333333332" />
         <entry key="app/src/main/res/menu/navigation.xml" value="0.14427083333333332" />
         <entry key="app/src/main/res/xml/root_preferences.xml" value="0.14427083333333332" />

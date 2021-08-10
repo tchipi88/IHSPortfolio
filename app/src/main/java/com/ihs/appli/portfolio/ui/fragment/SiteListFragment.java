@@ -70,6 +70,9 @@ public class SiteListFragment extends ViewModelFragment<SiteViewModel> implement
             adapter.addAll(sites);
         });
 
+        view.findViewById(R.id.add_site).setOnClickListener(v -> {
+            Navigation.findNavController(v).navigate(R.id.action_siteListFragment_to_siteAddFragment);
+        });
         return view;
     }
 
@@ -108,7 +111,7 @@ public class SiteListFragment extends ViewModelFragment<SiteViewModel> implement
                 @Override
                 public void onClick(View v) {
                     viewModel.setSite(holder.mItem);
-                    Navigation.findNavController(v).navigate(R.id.action_settingsFragment_to_siteFragment);
+                    Navigation.findNavController(v).navigate(R.id.action_siteListFragment_to_siteFragment);
 
                 }
             });

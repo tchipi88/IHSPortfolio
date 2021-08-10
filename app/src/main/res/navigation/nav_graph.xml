@@ -7,19 +7,33 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.ihs.appli.portfolio.ui.fragment.SettingsFragment"
-        android:label="Settings" >
-        <action
-            android:id="@+id/action_settingsFragment_to_siteFragment"
-            app:destination="@id/siteFragment" />
-    </fragment>
+        android:label="Settings" />
     <fragment
         android:id="@+id/siteListFragment"
         android:name="com.ihs.appli.portfolio.ui.fragment.SiteListFragment"
-        android:label="Site List" />
+        android:label="Site List" >
+        <action
+            android:id="@+id/action_siteListFragment_to_siteFragment"
+            app:destination="@id/siteFragment" />
+        <action
+            android:id="@+id/action_siteListFragment_to_siteAddFragment"
+            app:destination="@id/siteAddFragment" />
+        <action
+            android:id="@+id/action_siteListFragment_to_siteEditFragment"
+            app:destination="@id/siteEditFragment" />
+    </fragment>
     <action android:id="@+id/action_global_siteListFragment" app:destination="@id/siteListFragment" />
     <action android:id="@+id/action_global_settingsFragment" app:destination="@id/settingsFragment" />
     <fragment
         android:id="@+id/siteFragment"
         android:name="com.ihs.appli.portfolio.ui.fragment.SiteFragment"
-        android:label="SiteFragment" />
+        android:label="Site" />
+    <fragment
+        android:id="@+id/siteAddFragment"
+        android:name="com.ihs.appli.portfolio.ui.fragment.SiteAddFragment"
+        android:label="Add Site" />
+    <fragment
+        android:id="@+id/siteEditFragment"
+        android:name="com.ihs.appli.portfolio.ui.fragment.SiteEditFragment"
+        android:label="Edit Site" />
 </navigation>

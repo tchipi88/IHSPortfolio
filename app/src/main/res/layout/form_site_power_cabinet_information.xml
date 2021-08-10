@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CardViewStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        >
+
+        <TextView
+            style="@style/TextCardViewBold"
+            android:text="@string/site_power_cabinet_information" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/rectifierType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rectifierType"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/powerCabinetType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/powerCabinetType"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/batteryType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/batteryType"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/numberOfRack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/numberOfRack"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/rackCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rackCapacity"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/currentDCLoad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/currentDCLoad"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/numberOfRectifierModule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/numberOfRectifierModule"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
+                android:id="@+id/numberOfSlotAvailable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/numberOfSlotAvailable"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
