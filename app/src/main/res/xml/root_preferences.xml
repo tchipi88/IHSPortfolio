@@ -1,5 +1,30 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory app:title="@string/site_preferences">
+
+        <EditTextPreference
+            app:key="pseudo"
+            app:title="@string/pseudo"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue=""
+            app:entries="@array/region_entries"
+            app:entryValues="@array/region_values"
+            app:key="site_region"
+            app:title="@string/my_region"
+            app:useSimpleSummaryProvider="true" />
+
+
+        <ListPreference
+            app:defaultValue=""
+            app:entries="@array/cluster_entries"
+            app:entryValues="@array/cluster_values"
+            app:key="site_cluster"
+            app:title="@string/my_cluster"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
 
 
 </PreferenceScreen>

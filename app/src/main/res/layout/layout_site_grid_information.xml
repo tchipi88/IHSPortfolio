@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CardViewStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/header_site_grid_information"
+            style="@style/TextCardViewHeaderExpand"
+            android:text="@string/site_grid_information" />
+
+        <LinearLayout
+            android:id="@+id/section_site_grid_information"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -100,8 +100,8 @@ public class SiteListFragment extends ViewModelFragment<SiteViewModel> implement
             holder.ihsId.setText(holder.mItem.ihsId);
             holder.name.setText(holder.mItem.name);
             holder.site_operator_id.setText(holder.mItem.operatorId);
-            holder.site_location.setText(holder.mItem.location);
-            holder.site_classe.setText(holder.mItem.classe);
+            holder.site_location.setText(holder.mItem.region);
+            holder.site_classe.setText(holder.mItem.type);
             holder.site_configuration.setText(holder.mItem.configuration);
             holder.site_topology.setText(holder.mItem.topology);
             holder.mView.setOnClickListener(new View.OnClickListener() {

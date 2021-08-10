@@ -8,4 +8,15 @@
     <string name="site_classe">Class</string>
     <string name="site_topology">Topology</string>
     <string name="site_operator_id">Operator ID</string>
+    <string name="site_informations">SITE INFORMATIONS</string>
+    <string name="site_management">SITE MANAGEMENT</string>
+    <string name="site_grid_information">GRID INFORMATIONS</string>
+    <string name="site_power_cabinet_information">POWER CABINET INFORMATIONS</string>
+    <string name="site_generator_information">GENERATORS INFORMATIONS</string>
+    <string name="site_fuel_tank_information">FUEL TANK INFORMATIONS</string>
+    <string name="site_solar_system">SOLAR SYSTEM</string>
+    <string name="site_preferences">Site Preferences</string>
+    <string name="my_region">My region</string>
+    <string name="pseudo">Pseudo</string>
+    <string name="my_cluster">My cluster</string>
 </resources>

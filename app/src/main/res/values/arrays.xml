@@ -1,0 +1,30 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="region_entries">
+        <item>Littoral</item>
+        <item>Central</item>
+        <item>Adamawa</item>
+        <item>East</item>
+        <item>Far North</item>
+        <item>North</item>
+        <item>Northwest</item>
+        <item>South</item>
+        <item>Southwest</item>
+        <item>West</item>
+    </string-array>
+
+    <string-array name="region_values">
+        <item>Littoral</item>
+        <item>Central</item>
+        <item>Adamawa</item>
+        <item>East</item>
+        <item>Far North</item>
+        <item>North</item>
+        <item>Northwest</item>
+        <item>South</item>
+        <item>Southwest</item>
+        <item>West</item>
+    </string-array>
+    <string-array name="cluster_entries" />
+    <string-array name="cluster_values" />
+</resources>
