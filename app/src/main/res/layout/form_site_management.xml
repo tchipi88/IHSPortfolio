@@ -59,7 +59,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
-                android:id="@+id/supervisor_contact1"
+                android:id="@+id/supervisorContact1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/contact1"
@@ -75,7 +75,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
-                android:id="@+id/supervisor_contact2"
+                android:id="@+id/supervisorContact2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/contact2"
@@ -94,7 +94,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
-                android:id="@+id/team_leader"
+                android:id="@+id/teamLeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/team_leader"
@@ -114,7 +114,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
-                    android:id="@+id/teamLeader_contact1"
+                    android:id="@+id/teamLeaderContact1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/contact1"
@@ -130,7 +130,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
-                    android:id="@+id/teamLeader_contact2"
+                    android:id="@+id/teamLeaderContact2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/contact2"

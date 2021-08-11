@@ -63,4 +63,5 @@
     <string name="transformerAvailable">Transformer Available</string>
     <string name="search">Search</string>
     <string name="edit">Edit</string>
+    <string name="error_field_required">Field required !!</string>
 </resources>
